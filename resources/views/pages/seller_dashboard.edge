@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seller Dashboard | AoD</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-gradient-to-br from-white via-red-50 to-white text-gray-800">
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
+      
+      <!-- Logo -->
+      <div class="flex items-center justify-between w-full md:w-auto mb-2 md:mb-0">
+        <a href="/home" class="flex items-center space-x-2">
+          <img src="/images/logo_AoD side.png" alt="AoD Logo" class="h-10" />
+        </a>
+      </div>
+
+      <!-- Dashboard Title -->
+      <div class="text-center md:text-left">
+        <h1 class="text-2xl font-bold text-gray-800">
+          Seller <span class="text-red-600">Dashboard</span>
+        </h1>
+      </div>
+
+      <!-- Logout Button -->
+      <div class="flex items-center justify-center md:justify-end">
+        <button 
+          id="seller-logout"
+          class="px-4 py-2 bg-red-600 text-white rounded-full text-sm font-medium hover:bg-red-700 transition transform hover:scale-105"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Main content -->
+  <main id="seller-dashboard" class="flex-grow max-w-6xl mx-auto px-6 py-10">
+    <h1 class="text-3xl font-bold mb-6 text-center text-red-600">Seller Dashboard</h1>
+
+    <!-- Tabs -->
+    <div class="flex justify-center mb-8 gap-4">
+      <button id="tab-products" class="px-6 py-2 rounded-full bg-red-600 text-white font-medium shadow hover:bg-red-700 transition">Products</button>
+      <button id="tab-wishlist" class="px-6 py-2 rounded-full bg-white text-red-600 border border-red-600 font-medium hover:bg-red-50 transition">Wishlist</button>
+      <button id="tab-add" class="px-6 py-2 rounded-full bg-white text-red-600 border border-red-600 font-medium hover:bg-red-50 transition">Add Product</button>
+    </div>
+
+    <!-- Products Section -->
+    <section id="seller-products-section">
+      <div id="seller-products-list" class="flex gap-4">
+        <!-- Produk dirender di sini -->
+      </div>
+    </section>
+
+    <!-- Wishlist Section -->
+    <section id="wishlist-section" class="hidden">
+      <div id="wishlist-list" class="flex gap-4">
+        <!-- Wishlist dirender di sini -->
+      </div>
+    </section>
+
+    <!-- Add Product Section -->
+    <section id="add-product-section" class="hidden">
+      <div class="bg-white p-6 rounded-xl shadow max-w-lg mx-auto">
+        <h2 class="text-xl font-semibold text-center mb-4">Tambah Produk Baru</h2>
+        <form id="add-product-form" class="space-y-4">
+          <div>
+            <label class="block font-medium mb-1">Nama Produk</label>
+            <input id="p-name" type="text" class="w-full border rounded px-3 py-2" placeholder="Nama produk" required />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Harga</label>
+            <input id="p-price" type="number" class="w-full border rounded px-3 py-2" placeholder="Harga" required />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Slug (ID unik)</label>
+            <input id="p-slug" type="text" class="w-full border rounded px-3 py-2" placeholder="contoh: angel-2" required />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Nama Gambar (dalam /images)</label>
+            <input id="p-image" type="text" class="w-full border rounded px-3 py-2" placeholder="contoh: sepatu_baru.jpeg" required />
+          </div>
+          <div>
+            <label class="block font-medium mb-1">Deskripsi</label>
+            <textarea id="p-desc" rows="3" class="w-full border rounded px-3 py-2" placeholder="Deskripsi singkat"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-red-600 text-white rounded-full py-2 hover:bg-red-700 transition">
+            Tambah Produk
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (selalu di bawah) -->
+    <footer class="bg-gray-800 text-white mt-16">
+      <div class="max-w-6xl mx-auto py-8 px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-300">
+          &copy; 2025 AoD Store — All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-red-400 transition">Instagram</a>
+          <a href="#" class="hover:text-red-400 transition">Facebook</a>
+          <a href="#" class="hover:text-red-400 transition">Twitter</a>
+        </div>
+      </div>
+    </footer>
+
+  <script src="/js/app.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof initSellerDashboard === "function") {
+        initSellerDashboard();
+      }
+    });
+  </script>
+</body>
+</html>

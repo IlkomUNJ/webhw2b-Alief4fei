@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AoD | About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gradient-to-br from-white via-red-50 to-white text-gray-800">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-sm">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between"
+      >
+        <!-- Logo -->
+        <div
+          class="flex items-center justify-between w-full md:w-auto mb-2 md:mb-0"
+        >
+          <a href="/home" class="flex items-center space-x-2">
+            <img src="/images/logo_AoD side.png" alt="AoD Logo" class="h-10" />
+          </a>
+        </div>
+
+        <!-- Menu -->
+        <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+          <a
+            href="/home"
+            class="relative text-gray-700 hover:text-red-600 transition group"
+          >
+            Home
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+
+          <a
+            href="/shop"
+            class="relative text-gray-700 hover:text-red-600 transition group"
+          >
+            Shop
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+
+          <a href="/about" class="relative text-red-600 font-medium group">
+            About
+            <span
+              class="absolute left-0 bottom-0 w-full h-[2px] bg-red-600"
+            ></span>
+          </a>
+
+          <a
+            href="/wishlist"
+            class="relative text-gray-700 hover:text-red-600 transition group"
+          >
+            Wishlist
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+
+          <a
+            href="/cart"
+            class="relative text-gray-700 hover:text-red-600 transition group"
+          >
+            Cart
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </div>
+
+        <!-- Search & Account -->
+        <div class="flex items-center gap-2">
+          <input
+            id="global-search"
+            type="text"
+            placeholder="Search..."
+            class="px-3 py-2 border rounded-md text-sm w-40 md:w-48 focus:outline-red-600"
+          />
+          <button
+            id="search-btn"
+            class="px-3 py-2 bg-gray-200 text-gray rounded-md text-sm hover:bg-red-700 hover:text-white transition"
+          >
+            Search
+          </button>
+          <a href="/login-seller">
+            <img
+              src="/images/account_logo.png"
+              alt="Account"
+              class="h-8 rounded-full hover:opacity-80"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section
+      class="text-center py-20 bg-gradient-to-r from-red-100 via-white to-red-100"
+    >
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">
+        About <span class="text-red-600">AoD</span>
+      </h1>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Kami bukan sekadar toko sepatu — kami adalah perwujudan dari gaya,
+        kepercayaan diri, dan kenyamanan yang menyatu dalam setiap langkahmu.
+      </p>
+    </section>
+
+    <!-- Story Section -->
+    <section
+      class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center"
+    >
+      <div class="space-y-4">
+        <h2 class="text-3xl font-semibold text-gray-800">
+          Cerita di Balik <span class="text-red-600">AoD</span>
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+          AoD (Angel or Devil) lahir dari ide sederhana — bahwa setiap orang
+          memiliki dua sisi dalam dirinya: lembut dan kuat. Kami menciptakan
+          sepatu yang merepresentasikan keseimbangan itu: elegan tapi tangguh,
+          ringan tapi kokoh, sederhana tapi berkarakter.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Setiap produk kami dirancang dengan bahan pilihan, kenyamanan
+          maksimal, dan sentuhan desain modern. Karena kami percaya, sepatu yang
+          tepat bisa membuatmu melangkah lebih jauh — baik dalam gaya, maupun
+          dalam hidup.
+        </p>
+      </div>
+      <div class="flex justify-center">
+        <img
+          src="/images/Angel or Devil Shoes.png"
+          alt="About AoD"
+          class="rounded-xl shadow-lg w-full max-w-md hover:scale-105 transition-transform duration-500"
+        />
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="bg-white py-16">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-10">
+          Nilai-Nilai Kami
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300"
+          >
+            <h3 class="text-red-600 font-bold text-xl mb-2">Kualitas</h3>
+            <p class="text-gray-600">
+              Setiap sepatu dibuat dengan detail presisi dan bahan terbaik untuk
+              memastikan kenyamanan maksimal.
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300"
+          >
+            <h3 class="text-red-600 font-bold text-xl mb-2">Gaya</h3>
+            <p class="text-gray-600">
+              Desain modern yang mampu menonjolkan kepribadian dan kepercayaan
+              diri pemakainya.
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300"
+          >
+            <h3 class="text-red-600 font-bold text-xl mb-2">Keberlanjutan</h3>
+            <p class="text-gray-600">
+              Kami berkomitmen menggunakan bahan ramah lingkungan dan proses
+              produksi yang berkelanjutan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-red-50 py-20">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+          Hubungi <span class="text-red-600">Kami</span>
+        </h2>
+        <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
+          Ada pertanyaan, masukan, atau ingin bekerja sama dengan kami?  
+          Jangan ragu untuk menghubungi tim kami melalui form di bawah ini.
+        </p>
+
+        <form class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-md space-y-4">
+          <input
+            type="text"
+            placeholder="Nama"
+            class="w-full border rounded-md px-4 py-2 focus:outline-red-600"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="w-full border rounded-md px-4 py-2 focus:outline-red-600"
+          />
+          <textarea
+            rows="4"
+            placeholder="Pesan Anda"
+            class="w-full border rounded-md px-4 py-2 focus:outline-red-600"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transform hover:scale-105 transition-all duration-300"
+          >
+            Kirim Pesan
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="max-w-6xl mx-auto py-8 px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-300">
+          &copy; 2025 AoD Store — All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-red-400 transition">Instagram</a>
+          <a href="#" class="hover:text-red-400 transition">Facebook</a>
+          <a href="#" class="hover:text-red-400 transition">Twitter</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/app.js" defer></script>
+  </body>
+</html>

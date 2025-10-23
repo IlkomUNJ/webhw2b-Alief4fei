@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AoD | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-white text-gray-800">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-sm">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between"
+      >
+        <!-- Logo -->
+        <div
+          class="flex items-center justify-between w-full md:w-auto mb-2 md:mb-0"
+        >
+          <a href="/home" class="flex items-center space-x-2">
+            <img
+              src="/images/logo_AoD side.png"
+              alt="AoD Logo"
+              class="h-10"
+            />
+          </a>
+        </div>
+
+        <!-- Menu -->
+        <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+          <a href="/home" class="relative text-red-600 font-medium group">
+            Home
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+
+          <a
+            href="/shop"
+            class="relative text-gray-700 hover:text-red-600 transition group"
+          >
+            Shop
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+
+          <a
+            href="/about"
+            class="relative text-gray-700 hover:text-red-600 transition group"
+          >
+            About
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+
+          <a
+            href="/wishlist"
+            class="relative text-gray-700 hover:text-red-600 transition group"
+          >
+            Wishlist
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+
+          <a
+            href="/cart"
+            class="relative text-gray-700 hover:text-red-600 transition group"
+          >
+            Cart
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+        </div>
+
+        <!-- Search & Account -->
+        <div class="flex items-center gap-2">
+          <input
+            id="global-search"
+            type="text"
+            placeholder="Search..."
+            class="px-3 py-2 border rounded-md text-sm w-40 md:w-48 focus:outline-red-600"
+          />
+          <button
+            id="search-btn"
+            class="px-3 py-2 bg-gray-200 text-gray rounded-md text-sm hover:bg-red-700 hover:text-white transition"
+          >
+            Search
+          </button>
+          <a href="/login-seller">
+            <img
+              src="/images/account_logo.png"
+              alt="Account"
+              class="h-8 rounded-full hover:opacity-80"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center py-24 bg-gradient-to-r from-red-100 via-white to-red-100">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">
+        Step Up in <span class="text-red-600">Style</span>
+    </h1>
+    <p class="text-gray-600 max-w-xl mx-auto mb-8">
+        Temukan sepatu yang dirancang untuk kenyamanan, gaya, dan percaya diri —
+        hanya di <span class="text-red-600 font-semibold">AoD Store</span>.
+    </p>
+    <a
+        href="/shop"
+        class="inline-block bg-red-600 text-white px-6 py-3 rounded-full font-medium hover:bg-red-700 transform hover:scale-105 transition-all duration-300"
+    >
+        Shop Now
+    </a>
+    </section>
+
+
+    <!-- Featured Products -->
+    <section class="max-w-6xl mx-auto px-6 py-12 text-center">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+        Featured Products
+      </h2>
+
+      <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+        <!-- JS akan render produk di sini -->
+      </div>
+
+      <a
+        href="/shop"
+        class="inline-block bg-red-600 text-white px-6 py-3 rounded-full font-medium hover:bg-red-700 transform hover:scale-105 transition-all duration-300 shadow"
+      >
+        See All Products →
+      </a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="max-w-6xl mx-auto py-8 px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-300">
+          &copy; 2025 AoD Store — All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-red-400 transition">Instagram</a>
+          <a href="#" class="hover:text-red-400 transition">Facebook</a>
+          <a href="#" class="hover:text-red-400 transition">Twitter</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/app.js" defer></script>
+  </body>
+</html>

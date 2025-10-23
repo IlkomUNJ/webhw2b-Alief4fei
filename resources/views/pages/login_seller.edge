@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AoD | Seller Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="min-h-screen bg-gradient-to-br from-red-50 via-white to-red-100 flex flex-col justify-center items-center text-gray-800"
+  >
+    <!-- Logo -->
+    <a href="/home" class="mb-6">
+      <img
+        src="/images/logo_AoD side.png"
+        alt="AoD Logo"
+        class="h-14 hover:scale-105 transition-transform duration-300"
+      />
+    </a>
+
+    <!-- Login Card -->
+    <div
+      class="bg-white rounded-2xl shadow-lg p-8 w-11/12 sm:w-96 border border-gray-100"
+    >
+      <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">
+        Seller <span class="text-red-600">Login</span>
+      </h1>
+
+      <form id="seller-login-form" class="space-y-5">
+        <div>
+          <label class="block text-sm font-medium mb-1">Email</label>
+          <input
+            type="email"
+            id="seller-email"
+            placeholder="seller@example.com"
+            required
+            class="w-full border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Password</label>
+          <input
+            type="password"
+            id="seller-password"
+            placeholder="********"
+            required
+            class="w-full border rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
+          />
+        </div>
+
+        <!-- Dummy Account Info -->
+        <div
+          class="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700"
+        >
+          <p class="font-medium mb-1">🔑 Akun Demo Penjual:</p>
+          <p><span class="font-semibold">Email:</span> seller@aod.com</p>
+          <p><span class="font-semibold">Password:</span> aod123</p>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-2 bg-red-600 text-white font-semibold rounded-full hover:bg-red-700 transform hover:scale-105 transition-all duration-300"
+        >
+          Login
+        </button>
+      </form>
+
+      <p class="text-sm text-center text-gray-500 mt-6">
+        Bukan penjual?
+        <a href="/home" class="text-red-600 hover:underline">Kembali ke Home</a>
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 text-gray-500 text-sm text-center">
+      &copy; 2025 AoD Store. All Rights Reserved.
+    </footer>
+
+    <script>
+      document
+        .getElementById("seller-login-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const email = document
+            .getElementById("seller-email")
+            .value.trim()
+            .toLowerCase();
+          const password = document
+            .getElementById("seller-password")
+            .value.trim();
+
+          if (email === "seller@aod.com" && password === "aod123") {
+            localStorage.setItem("sellerLoggedIn", true);
+            window.location.href = "/seller-dashboard";
+          } else {
+            alert("Email atau password salah!");
+          }
+        });
+    </script>
+  </body>
+</html>
